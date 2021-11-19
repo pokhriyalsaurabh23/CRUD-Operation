@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    div(class="m-auto w-75")
+        a(href="/" class="btn btn-primary test ml" role="button") User Details 
+        form(action="/updateuser/"+userData._id method="POST" class='m-auto w-75')
+            h2(class="text-center") Update User
+            div(class="form-group row")
+                label(for="name") Name
+                input(type="text" class="form-control" id="name" name="name" value=userData.name placeholder="Name")
+            div(class="form-group row")
+                label(for="exampleInputEmail1") Email address
+                input(type="email" class="form-control" id="exampleInputEmail1" name="email" value=userData.email  aria-describedby="emailHelp" placeholder="Email")
+            div(class="form-group row")
+                fieldset(class="form-group row") 
+                    legend(class="col-form-label col-sm-2 float-sm-left pt-0 ") Gender
+                div(class="col-sm-10")
+                    div(class="form-check form-check-inline")
+                        input(type="radio" class="form-check-input" name="gender" data=userData.gender value="Male" placeholder="Enter valid email ID")
+                        label(class="form-check-label") Male
+                    div(class="form-check form-check-inline")
+                        input(type="radio" class="form-check-input" name="gender" data=userData.gender value="Female"  placeholder="Enter valid email ID")
+                        label(class="form-check-label") Female
+                    div(class="form-check form-check-inline")
+                        input(type="radio" class="form-check-input" name="gender" data=userData.gender value="Others"  placeholder="Enter valid email ID")
+                        label(class="form-check-label") Others
+            div(class="form-group row")
+                fieldset(class="form-group row") 
+                    legend(class="col-form-label col-sm-2 float-sm-left pt-0") Status 
+                div(class="col-sm-10")
+                    div(class="form-check form-check-inline")
+                        input(type="radio" class="form-check-input" name="status" value="Active" data=userData.status  placeholder="Enter valid email ID")
+                        label(class="form-check-label") Active
+                    div(class="form-check form-check-inline")
+                        input(type="radio" class="form-check-input" name="status" value="Inactive" data=userData.status placeholder="Enter valid email ID")
+                        label(class="form-check-label") Inactive
+            div(class="form-group row")
+                button(class="btn btn-primary btn-block") Update
+    script(src="/javascripts/main.js")

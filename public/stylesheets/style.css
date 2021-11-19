@@ -1,0 +1,30 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+.bg-color{
+  background-color:#06d6a0 ;
+}
+.flex{
+  display: flex;
+  width: 83%;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.user{
+  margin-left: 100px;
+}
+.edit{
+  color: black;
+}
+/* .test{
+  border: 2px solid red;
+} */
+.ml{
+  margin-left: 60px;
+}
+
